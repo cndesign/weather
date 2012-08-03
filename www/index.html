@@ -3,7 +3,8 @@
 <head>
   <!-- developed by michael ruddy 2012 -->
   <meta charset="utf-8" />
-  <title>The Surf Station - St. Augustine Beach, FL 32080 Updated Weather</title>
+  <meta name="description" content="The Surf Station Weather Station Updated Current Weather Information for St. Augustine Beach, FL 32080" />
+  <title>The Surf Station Weather - St. Augustine Beach, FL 32080 Updated Weather - Brought to you by The Surf Station - www.surf-station.com, www.surfstationstore.com</title>
   <style>
   body {
     padding: 0px 0px 0px 0px;
@@ -13,33 +14,184 @@
     font-size: 12pt;
   }
 
+  img {
+    border: 0px solid #000000;
+  }
+
   #header {
-    background-color: #000000;
+    background: url(bg.jpg?v=0);
     position: fixed;
     top: 0px;
     left: 0px;
     height: 100px;
     width: 100%;
+    text-align: center;
   }
 
   #fixedHeaderSpacer {
     height: 100px;
   }
 
-  #logo {
-    border: 0px solid #000000;
-    /* the next 3 styles center the image */
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+  #broughtToYouBy {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    color: #ffffff;
+    font-size: 8pt;
+    text-align: center;
+    padding: 5px;
+  }
+
+  #broughtToYouBy img {
+    width: 70px;
+    height: 70px;
+    border-radius: 2px;
+  }
+
+  .infoArea {
+    margin: 10px;
+    border: 4px solid #888888;
+    border-radius: 10px;
+    background-color: #efefef;
+    overflow: hidden;
+    width: 45%;
+    float: left;
+    text-align: left;
+  }
+
+  #infoHeader {
+    background-color: #888888;
+    color: #ffffff;
+    padding: 3px;
+    font-size: 20pt;
+    font-weight: bold;
+  }
+
+  .dial {
+    background: url(dial_bg.png?v=0);
+    padding: 0px;
+  }
+
+  .chart {
+    padding: 0px;
+    background-color: #dddddd;
+  }
+
+  #infoSubHeader, #gpsLink {
+    font-size: 10pt;
+    color: #ffffff;
+  }
+
+  .dataBox {
+    float: left;
+    text-align: center;
+    margin: 6px;
+  }
+
+  .dataName {
+    padding: 5px;
+    font-size: 10pt;
+    background-color: #bbbbbb;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+  }
+
+  .dataValue {
+    padding: 5px;
+    font-size: 16pt;
+    background-color: #cccccc;
+    font-weight: bold;
+  }
+
+  .tempUnit {
+    vertical-align: top;
+    font-size: 10pt;
+  }
+
+  #moreInfo {
+    color: #000000;
+    font-size: 10pt;
+  }
+
+  #footer, #footer > a {
+    padding: 5px;
+    background-color: #07123f;
+    color: #ffffff;
+    font-size: 12pt;
   }
   </style>
   <link rel="shortcut icon" href="favicon.ico?v=0">
+  <script>
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-20128098-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
 </head>
 <body>
   <div id="header">
-    <a href="http://weather.surf-station.com/"><img id="logo" src="ss_weather_station.jpg" title="The Surf Station Weather Station Home Page" /></a>
+    <div><a href="/"><img id="logo" src="ss_weather_station.png?v=0" title="The Surf Station Weather Station Home Page" /></a></div>
+    <div id="broughtToYouBy"><div>Brought to you by</div><div><a href="http://www.surf-station.com/"><img src="ssvegaslogo.jpg?v=0" title="Brought to you by The Surf Station - www.surf-station.com, www.surfstationstore.com" /></a></div></div>
   </div>
   <div id="fixedHeaderSpacer"></div>
+  <div class="infoArea">
+    <div id="infoHeader"><div id="location">St. Augustine Beach, FL 32080 Current Weather</div><div id="infoSubHeader"><a id="gpsLink" href="http://maps.googleapis.com/maps/api/staticmap?center=29.84685,-81.266133&zoom=13&scale=2&size=300x300&format=png&sensor=false&markers=29.84685,-81.266133">GPS: 29&deg; 50.811&apos; N; 81&deg; 15.968&apos; W - 40 FT</a> <span id="asOf">As of <span id="stationDate"></span> <span id="stationTime"></span></span></div></div>
+    <div class="dataBox"><div class="dataValue"><span id="outsideTemp"></span><span class="tempUnit"></span></div><div class="dataName">Temperature</div></div>
+    <div class="dataBox"><div class="dataValue">From <span id="windDirection"></span> (<span id="windDirectionDegrees"></span>&deg;) <span id="windSpeed"></span> <span class="windUnit"></span></div><div class="dataName">Wind</div></div>
+    <div class="dataBox"><div class="dataValue"><span id="windGustSpeed"></span> <span class="windUnit"></span></div><div class="dataName">Wind Gust</div></div>
+    <div class="dataBox"><div class="dataValue"><span id="intervalAvgWindSpeed"></span> <span class="windUnit"></span></div><div class="dataName">Average Wind Speed</div></div>
+    <div class="dataBox"><div class="dataValue"><span id="rainRate"></span> <span class="rateUnit"></span></div><div class="dataName">Rain Rate</div></div>
+    <div class="dataBox"><div class="dataValue"><span id="sunriseTime"></span></div><div class="dataName">Sunrise</div></div>
+    <div class="dataBox"><div class="dataValue"><span id="sunsetTime"></span></div><div class="dataName">Sunset</div></div>
+    <div class="dataBox"><div class="dataValue"><span id="windChill"></span><span class="tempUnit"></span></div><div class="dataName">Wind Chill</div></div>
+    <div class="dataBox"><div class="dataValue"><span id="outsideHeatIndex"></span><span class="tempUnit"></span></div><div class="dataName">Heat Index</div></div>
+    <div class="dataBox"><div class="dataValue"><span id="outsideDewPt"></span><span class="tempUnit"></span></div><div class="dataName">Dew Point</div></div>
+    <div class="dataBox"><div class="dataValue"><span id="outsideHumidity"></span><span class="humUnit"></span></div><div class="dataName">Humidity</div></div>
+    <div class="dataBox"><div class="dataValue"><span id="moonPhase"></span></div><div class="dataName">Moon</div></div>
+    <div class="dataBox"><div class="dataValue"><span id="barometer"></span> <span class="barUnit"></span> <span id="baromtrend"></span></div><div class="dataName">Pressure</div></div>
+    <div class="dataBox"><div class="dataName"><a id="moreInfo" href="http://weather.surf-station.com/wx/index.html">More Detailed Weather Information and History</a></div></div>
+  </div>
+  <div class="infoArea">
+    <img class="chart" src="http://weather.surf-station.com/wx/tempdaycomp.png" title="Today's Temperature" />
+    <img class="chart" src="http://weather.surf-station.com/wx/rainday.png" title="Today's Rain" />
+    <img class="dial" src="http://weather.surf-station.com/wx/wind.png" title="Wind Direction" />
+    <a href="http://en.wikipedia.org/wiki/Wind_rose" title="What is a wind rose?"><img class="dial" src="http://weather.surf-station.com/wx/windroseday.png" title="Today's Wind Rose" /></a>
+    <img class="chart" src="http://weather.surf-station.com/wx/dayrain.png" title="Today's Rain" />
+  </div>
+  <div style="clear: both;"></div>
+  <div id="footer">
+    Check out our other sites: <a href="http://www.surf-station.com/">www.surf-station.com</a> | <a href="http://m.surf-station.com/">m.surf-station.com</a> | <a href="http://www.surfstationstore.com/">www.surfstationstore.com</a>
+  </div>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script>
+  var SurfStation = SurfStation || {};
+
+  if (!SurfStation.weatherStationCallback) {
+    SurfStation.weatherStationCallback = function(data) {
+      // this just does vanilla data population
+      if (data) {
+        for (x in data) {
+          if (data[x]) {
+            $('#' + x).html($.trim(data[x]));
+          }
+        }
+        $('.tempUnit').html('&deg;' + $.trim(data.tempUnit));
+        $('.humUnit').html($.trim(data.humUnit));
+        $('.windUnit').html($.trim(data.windUnit));
+        $('.barUnit').html($.trim(data.barUnit));
+        $('.rateUnit').html($.trim(data.rateUnit));
+      }
+    };
+  }
+
+  $(function() {
+  });
+  </script>
+  <script src="http://weather.surf-station.com/wx/wxdata.json"></script>
 </body>
 </html>
