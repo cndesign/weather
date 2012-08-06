@@ -171,8 +171,8 @@
     <div class="dataBox"><div class="dataValue"><span id="houravgwind"></span> <span class="windUnit"></span> (<span id="hourdomwinddir"></span>&deg;)</div><div class="dataName">Last Hour Wind Averages</div></div>
     <div class="dataBox"><div class="dataValue"><span id="sunriseTime"></span></div><div class="dataName">Sunrise</div></div>
     <div class="dataBox"><div class="dataValue"><span id="sunsetTime"></span></div><div class="dataName">Sunset</div></div>
-    <div class="dataBox"><div class="dataValue"><span id="windChill"></span><span class="tempUnit"></span></div><div class="dataName">Wind Chill</div></div>
-    <div class="dataBox"><div class="dataValue"><span id="outsideHeatIndex"></span><span class="tempUnit"></span></div><div class="dataName">Heat Index</div></div>
+    <div id="windChillDataBox" class="dataBox"><div class="dataValue"><span id="windChill"></span><span class="tempUnit"></span></div><div class="dataName">Wind Chill</div></div>
+    <div id="outsideHeatIndexDataBox" class="dataBox"><div class="dataValue"><span id="outsideHeatIndex"></span><span class="tempUnit"></span></div><div class="dataName">Heat Index</div></div>
     <div class="dataBox"><div class="dataValue"><span id="outsideDewPt"></span><span class="tempUnit"></span></div><div class="dataName">Dew Point</div></div>
     <div class="dataBox"><div class="dataValue"><span id="outsideHumidity"></span><span class="humUnit"></span></div><div class="dataName">Humidity</div></div>
     <div class="dataBox"><div class="dataValue"><img id="moonFromEarth" src="http://images.surf-station.com/moon.png" title="Current View of the Moon from Earth" /><span id="moonPhase"></span></div><div class="dataName">Moon</div></div>
@@ -215,6 +215,8 @@
         $('.rateUnit').html($.trim(data.rateUnit));
         $('#sunriseTime').append(' AM');
         $('#sunsetTime').html('0' + (parseInt(data['sunsetTime'].substring(0, 2), 10) - 12) + ':' + data['sunsetTime'].substring(3, 5) + ' PM');
+        $('#windChillDataBox').toggle(parseInt(data['outsideTemp']) <= 50);
+        $('#outsideHeatIndexDataBox').toggle(parseInt(data['outsideTemp']) >= 80);
       }
     };
   }
