@@ -1,0 +1,179 @@
+<!doctype html>
+<html>
+<head>
+  <!-- developed by michael ruddy 2013 -->
+  <meta charset="utf-8" />
+  <meta name="description" content="The Surf Station Weather Station Updated Current Weather Information for St. Augustine Beach, FL 32080" />
+  <title>The Surf Station Weather - St. Augustine Beach, FL 32080 Updated Weather - Brought to you by The Surf Station - www.surf-station.com, www.surfstationstore.com</title>
+  <style>
+  body {
+    padding: 0px 0px 0px 0px;
+    border: 0px none #000000;
+    margin: 0px 0px 0px 0px;
+    font-family: arial, sans-serif;
+    font-size: 12pt;
+  }
+
+  img {
+    border: 0px solid #000000;
+  }
+
+  #header {
+    background: url(bg.jpg?v=20120808);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100px;
+    width: 100%;
+    text-align: center;
+  }
+
+  #fixedHeaderSpacer {
+    height: 100px;
+  }
+
+  #broughtToYouBy {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    color: #ffffff;
+    font-size: 8pt;
+    text-align: center;
+    padding: 5px;
+  }
+
+  #broughtToYouBy img {
+    width: 70px;
+    height: 70px;
+    border-radius: 2px;
+  }
+
+  .infoArea {
+    margin: 10px;
+    border: 4px solid #888888;
+    border-radius: 10px;
+    background-color: #efefef;
+    overflow: hidden;
+    float: left;
+    text-align: left;
+  }
+
+  .infoArea2 {
+    margin: 10px;
+    border: 4px solid #888888;
+    border-radius: 10px;
+    background-color: #efefef;
+    overflow: hidden;
+    width: 640px;
+    float: left;
+    text-align: center;
+  }
+
+  #infoHeader {
+    background-color: #888888;
+    color: #ffffff;
+    padding: 3px;
+    font-size: 20pt;
+    font-weight: bold;
+  }
+
+  .dial {
+    background: url(dial_bg.png?v=20120808);
+    padding: 0px;
+  }
+
+  .chart {
+    padding: 0px;
+    background-color: #dddddd;
+  }
+
+  #infoSubHeader, #gpsLink {
+    font-size: 10pt;
+    color: #ffffff;
+  }
+
+  .dataBox {
+    float: left;
+    text-align: center;
+    margin: 6px;
+  }
+
+  .dataName {
+    padding: 5px;
+    font-size: 10pt;
+    background-color: #bbbbbb;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+  }
+
+  .dataValue {
+    padding: 5px;
+    font-size: 16pt;
+    background-color: #cccccc;
+    font-weight: bold;
+  }
+
+  .tempUnit {
+    vertical-align: top;
+    font-size: 10pt;
+  }
+
+  .moreInfo {
+    color: #000000;
+    font-size: 10pt;
+  }
+
+  #footer, #footer > a {
+    padding: 5px;
+    background-color: #07123f;
+    color: #ffffff;
+    font-size: 12pt;
+  }
+
+  .infoArea2 > img {
+    border-radius: 2px;
+  }
+
+  #moonFromEarth {
+    width: 100px;
+    height: 100px;
+    display: block;
+    border-radius: 4px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  </style>
+  <link rel="shortcut icon" href="favicon.ico?v=20120808">
+  <script>
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-20128098-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+</head>
+<body>
+  <div id="header">
+    <div><a href="/"><img id="logo" src="ss_weather_station.png?v=20120808" title="The Surf Station Weather Station Home Page" /></a></div>
+    <div id="broughtToYouBy"><div>Brought to you by</div><div><a href="http://www.surf-station.com/"><img src="ssvegaslogo.png?v=20120808" title="Brought to you by The Surf Station - www.surf-station.com, www.surfstationstore.com" /></a></div></div>
+  </div>
+  <div id="fixedHeaderSpacer"></div>
+  <div class="infoArea">
+    <div id="infoHeader"><div id="location">Maintenance</div><div id="infoSubHeader"><br />The Surf Station Weather Station is currently down for hardware maintenance.<br />We expect the maintenance to be finished within the next few days.<br />Sorry for this temporary inconvenience.<br /><br /><a id="gpsLink" target="_blank" href="http://maps.googleapis.com/maps/api/staticmap?center=29.84685,-81.266133&zoom=13&scale=2&size=300x300&format=png&sensor=false&markers=29.84685,-81.266133">GPS: 29&deg; 50.811&apos; N; 81&deg; 15.968&apos; W - 40 FT</a></div></div>
+    <div class="dataBox"><div class="dataName"><a class="moreInfo" href="http://weather.surf-station.com/wx/index.html">More Detailed Weather Information and History</a></div></div>
+    <div class="dataBox"><div class="dataName"><a class="moreInfo" href="http://weather.surf-station.com/about.html">About this Weather Station</a></div></div>
+  </div>
+  <div class="infoArea2">
+    <img src="http://images.surf-station.com/wavecam/latest.jpg" title="Latest Snapshot from The Surf Station Wavecam" />
+  </div>
+  <div style="clear: both;"></div>
+  <div id="footer">
+    Check out our other sites: <a href="http://www.surf-station.com/">www.surf-station.com</a> | <a href="http://m.surf-station.com/">m.surf-station.com</a> | <a href="http://www.surfstationstore.com/">www.surfstationstore.com</a>
+  </div>
+</body>
+</html>
+
