@@ -5,183 +5,825 @@
   <meta charset="utf-8" />
   <meta name="description" content="The Surf Station Weather Station Updated Current Weather Information for St. Augustine Beach, FL 32080" />
   <title>The Surf Station Weather - St. Augustine Beach, FL 32080 Updated Weather - Brought to you by The Surf Station - www.surf-station.com, www.surfstationstore.com</title>
-  <link rel="apple-touch-icon" href="ssicon.jpg?v=20140401" />
-  <link rel="apple-touch-icon-precomposed" href="ssicon.jpg?v=20140401" />
-  <style>
-  body {
-    padding: 0px 0px 0px 0px;
-    border: 0px none #000000;
-    margin: 0px 0px 0px 0px;
-    font-family: arial, sans-serif;
-    font-size: 12pt;
-  }
+  <link rel="apple-touch-icon" href="images/ssicon.jpg?v=20140401" />
+  <link rel="apple-touch-icon-precomposed" href="images/ssicon.jpg?v=20140401" />
+  <link rel="shortcut icon" href="images/favicon.ico?v=20120808">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow' rel='stylesheet' type='text/css'>
 
-  img {
-    border: 0px solid #000000;
-  }
-
-  #header {
-    background: url(bg.jpg?v=20120808);
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    height: 100px;
-    width: 100%;
-    text-align: center;
-  }
-
-  #fixedHeaderSpacer {
-    height: 100px;
-  }
-
-  #broughtToYouBy {
-    position: absolute;
-    right: 0px;
-    bottom: 0px;
-    color: #ffffff;
-    font-size: 8pt;
-    text-align: center;
-    padding: 5px;
-  }
-
-  #broughtToYouBy img {
-    width: 70px;
-    height: 70px;
-    border-radius: 2px;
-  }
-
-  .infoArea {
-    margin: 10px;
-    border: 4px solid #888888;
-    border-radius: 10px;
-    background-color: #efefef;
-    overflow: hidden;
-    float: left;
-    text-align: left;
-  }
-
-  .infoArea2 {
-    margin: 10px;
-    border: 4px solid #888888;
-    border-radius: 10px;
-    background-color: #efefef;
-    overflow: hidden;
-    width: 640px;
-    float: left;
-    text-align: center;
-  }
-
-  #infoHeader {
-    background-color: #888888;
-    color: #ffffff;
-    padding: 3px;
-    font-size: 20pt;
-    font-weight: bold;
-  }
-
-  .dial {
-    background: url(dial_bg.png?v=20120808);
-    padding: 0px;
-  }
-
-  .chart {
-    padding: 0px;
-    background-color: #dddddd;
-  }
-
-  #infoSubHeader, #gpsLink {
-    font-size: 10pt;
-    color: #ffffff;
-  }
-
-  .dataBox {
-    float: left;
-    text-align: center;
-    margin: 6px;
-  }
-
-  .dataName {
-    padding: 5px;
-    font-size: 10pt;
-    background-color: #bbbbbb;
-    border-bottom-left-radius: 3px;
-    border-bottom-right-radius: 3px;
-  }
-
-  .dataValue {
-    padding: 5px;
-    font-size: 16pt;
-    background-color: #cccccc;
-    font-weight: bold;
-  }
-
-  .tempUnit {
-    vertical-align: top;
-    font-size: 10pt;
-  }
-
-  .moreInfo {
-    color: #000000;
-    font-size: 10pt;
-  }
-
-  #footer, #footer > a {
-    padding: 5px;
-    background-color: #07123f;
-    color: #ffffff;
-    font-size: 12pt;
-  }
-
-  .infoArea2 > img {
-    border-radius: 2px;
-  }
-
-  #moonFromEarth {
-    width: 100px;
-    height: 100px;
-    display: block;
-    border-radius: 4px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  </style>
-  <link rel="shortcut icon" href="favicon.ico?v=20120808">
+  <!-- Start Menu CSS -->
+        <!-- Responsive Dropdown Menu color scheme: REQUIRED -->
+        <link rel="stylesheet" href="css/rddm-light.css" type="text/css" />
+        <!-- Responsive Dropdown Menu: Small screens (mobile) -->
+        <link rel="stylesheet" href="css/rddm-mobile.css" type="text/css" />
+        <!-- Responsive Dropdown Menu: Large screens (desktops) -->
+        <link rel="stylesheet" href="css/rddm-desktop.css" media="only screen and (min-width: 959px)" />
+        <!-- IE specific stylesheets -->
+        <!--[if (lt IE 8)]>
+            <link rel="stylesheet" href="css/rddm-ie7.css" type="text/css" />
+        <![endif]-->
+        <!--[if (IE 8)]>
+            <link rel="stylesheet" href="css/rddm-ie8.css" type="text/css" />
+        <![endif]-->
+        <!-- End Menu CSS -->
 </head>
 <body>
+<div id="container">
   <div id="header">
-    <div><a href="/"><img id="logo" src="ss_weather_station.png?v=20120808" title="The Surf Station Weather Station Home Page" /></a></div>
-    <div id="broughtToYouBy"><div>Brought to you by</div><div><a href="http://www.surf-station.com/"><img src="ssvegaslogo.png?v=20120808" title="Brought to you by The Surf Station - www.surf-station.com, www.surfstationstore.com" /></a></div></div>
+    <div class="row">
+					<div class="col-md-6"><a href="/"><img src="images/weather-logo.jpg" title="The Surf Station Weather Station Home Page" style="width: 100%;" /></a></div>
+					<div class="col-md-6 pull-right">
+    <a href="http://surfstationstore.com" target="_blank"><img class="pull-right" src="images/online-store.jpg" style="width: 100%;"></a>
+    </div>
+    </div>
+    
+    	       <!-- Responsive Dropdown Menu wrapper. -->
+        <div class="rdd-menu-wrapper clearfix">
+            <div class="rdd-menu-holder">
+            
+                <!-- Responsive Dropdown Menu: Top level items list. -->
+                <nav class="rdd-menu">
+                    <ul>
+                    
+                                    <li class="parent" id="report">
+                                        <a href="http://www.surf-station.com"><i class="fa fa-bar-chart-o"></i> Surf Report</a>
+                                        <a href="#" class="ico-arrow close">&nbsp;</a>
+                                        <a href="#report" class="ico-arrow open">&nbsp;</a>
+                                        
+                                        <!-- Dropdown submenu panel start -->
+                                        <section class="submenu-panel">
+                                            
+                                            <!-- One column submenu layout start -->
+                                            <div class="colgroup single-col">
+                                                <section class="col">
+                                                    <p class="last">At the Surf Station, we understand Florida's waves & fully believe you should know before you go! We strive to offer NE Florida's best most detailed surf report including detailed wave/weather conditions, pictures, video, & more! View the detailed surf report below or call the classic phone report @ (904) 471-1122.</p>
+                                                </section>
+                                            </div>
+                                            <!-- One column submenu layout end -->
+                                            
+                                            <!-- Horizontal separator -->
+                                            <div class="submenu-separator">&nbsp;</div>
+                                            
+                                            <!-- Four columns submenu layout start -->
+                                            <div class="colgroup six-cols">
+                                                
+                                                <!-- Column #1 -->
+                                                <section class="col submenu-links">
+                                                    <h3><a href="http://surf-station.com/st-augustine-hd-wave-cam/">HD Wave Cam</a></h3>
+                                                    <ul>
+                                                        <a href="http://surf-station.com/st-augustine-hd-wave-cam/"><img src="http://www.surf-station.com/wp-content/uploads/2012/08/HD_Wave_Cam.jpg"></a>
+                                                    </ul>
+                                                </section>
+                                                
+                                                <!-- Column #2 -->
+                                                <section class="col submenu-links">
+                                                    <h3><a href="http://surf-station.com/north-florida-surf-forecast/">Surf Forecast</a></h3>
+                                                    <ul>
+                                                        <a href="http://surf-station.com/north-florida-surf-forecast/"><img src="http://www.surf-station.com/wp-content/uploads/2012/08/Surf_Forecast.jpg"></a>
+                                                    </ul>
+                                                </section>
+
+<!-- Column #2 -->
+                                                <section class="col submenu-links">
+                                                    <h3><a href="http://surf-station.com/surf-text-alerts/">Surf Text Alerts</a></h3>
+                                                    <ul>
+                                                        <a href="http://surf-station.com/surf-text-alerts/"><img src="http://surf-station.com/wp-content/uploads/2014/06/text-alerts.png"></a>
+                                                    </ul>
+                                                </section>
+                                                
+                                                <!-- Column #3 -->
+                                                <section class="col submenu-links">
+                                                    <h3><a href="http://weather.surf-station.com/">Weather Station</a></h3>
+                                                    <ul>
+                                                        <a href="http://weather.surf-station.com/"><img src="http://www.surf-station.com/wp-content/uploads/2012/08/Weather_Station.jpg"></a>
+                                                    </ul>
+                                                </section>
+                                                
+                                                <!-- Column #4 -->
+                                                <section class="col submenu-links">
+                                                    <h3><a href="http://images.surf-station.com/archive/">Report Photo Archive</a></h3>
+                                                    <ul>
+                                                        <a href="http://images.surf-station.com/archive/"><img src="http://www.surf-station.com/wp-content/uploads/2012/08/Surf_Photo_Archive.jpg"></a>
+                                                    </ul>
+                                                </section>
+                                                                                                <section class="col submenu-links">
+                                                    <h3><a href="http://tidesandcurrents.noaa.gov/noaatidepredictions/NOAATidesFacade.jsp?Stationid=8720587" target="_blank">NOAA Tide Chart</a></h3>
+                                                    <ul>
+	                                                  <a href="http://tidesandcurrents.noaa.gov/noaatidepredictions/NOAATidesFacade.jsp?Stationid=8720587" target="_blank"><img src="http://www.surf-station.com/wp-content/uploads/2012/08/Tide_Chart.jpg"></a>
+                                                    </ul>
+                                                </section>
+                                                
+                                            </div>
+                                            <!-- Four columns submenu layout end -->
+                                            
+                                        </section>
+                                        <!-- Dropdown submenu panel end -->
+                                        
+                                    </li>
+                        <!-- End of second Top level menu item. -->
+                        
+                        
+                        
+                                    <li class="parent" id="lessons">
+                                        <a href="/learn-how-to-surf/"><i class="fa fa-sun-o"></i> Lessons</a>
+                                        <a href="#" class="ico-arrow close">&nbsp;</a>
+                                        <a href="#lessons" class="ico-arrow open">&nbsp;</a>
+                                        
+                                        <!-- Dropdown submenu panel start -->
+                                        <section class="submenu-panel">
+                                            
+                                            <!-- One column submenu layout start -->
+                                            <div class="colgroup single-col">
+                                                <section class="col">
+                                                    <p class="last">At Surf Station, we arm ourself with a team of surf professionals including our Surf Team and Instructors.  Learn how to surf with St. Augustine's BEST instructors! We offer all levels of surf instruction from beginner to advanced & Stand Up Paddle lessons. Don't have a board? No problem! Surf Station has Rentals by the hour, day or week on Surfboards, Stand Up Paddleboards, wetsuits, bodyboards, & more!</p>
+                                                </section>
+                                            </div>
+                                            <!-- One column submenu layout end -->
+                                            
+                                            <!-- Horizontal separator -->
+                                            <div class="submenu-separator">&nbsp;</div>
+                                            
+                                            <!-- Four columns submenu layout start -->
+                                            <div class="colgroup five-cols">
+                                                
+                                                <!-- Column #1 -->
+                                                <section class="col submenu-links">
+                                                    <h3><a href="http://surf-station.com/learn-how-to-surf/">Learn To Surf</a></h3>
+                                                    <ul>
+                                                        <a href="http://surf-station.com/learn-how-to-surf/"><img src="http://www.surf-station.com/wp-content/uploads/2012/08/How_To_Surf.jpg"></a>
+                                                    </ul>
+                                                </section>
+                                                
+                                                <!-- Column #2 -->
+                                                <section class="col submenu-links">
+                                                    <h3><a href="http://surf-station.com/st-augustine-surf-camp/">Surf Camp</a></h3>
+                                                    <ul>
+                                                        <a href="http://surf-station.com/st-augustine-surf-camp/"><img src="http://www.surf-station.com/wp-content/uploads/2013/01/Surf_Camp.jpg"></a>
+                                                    </ul>
+                                                </section>
+                                                
+                                                <!-- Column #3 -->
+                                                <section class="col submenu-links">
+                                                    <h3><a href="http://surf-station.com/hammock-beach-surf-lessons/">Hammock Surf Lessons</a></h3>
+                                                    <ul>
+                                                        <a href="http://surf-station.com/hammock-beach-surf-lessons/"><img src="http://www.surf-station.com/wp-content/uploads/2012/08/Hammock_Beach_Surf_Lessons.jpg"></a>
+                                                    </ul>
+                                                </section>
+                                                
+                                                <!-- Column #4 -->
+                                                <section class="col submenu-links">
+                                                    <h3><a href="http://surf-station.com/lessons-party-wave-birthdays/">Lessons & Parties</a></h3>
+                                                    <ul>
+                                                        <a href="http://surf-station.com/lessons-party-wave-birthdays/"><img src="http://www.surf-station.com/wp-content/uploads/2012/08/Surf_Lessons.jpg"></a>
+                                                    </ul>
+                                                </section>
+                                                                                                <section class="col submenu-links">
+                                                    <h3><a href="http://surf-station.com/surf-team-2/">Surf Team</a></h3>
+                                                    <ul>
+	                                                  <a href="http://surf-station.com/surf-team-2/"><img src="http://www.surf-station.com/wp-content/uploads/2012/08/Surf_Team.jpg"></a>
+                                                    </ul>
+                                                </section>
+                                                
+                                            </div>
+                                            <!-- Four columns submenu layout end -->
+                                            
+                                        </section>
+                                        <!-- Dropdown submenu panel end -->
+                                        
+                                    </li>
+                                                                        <li class="parent" id="media">
+                                        <a href="/category/surf/"><i class="fa fa-video-camera"></i> Media</a>
+                                        <a href="#" class="ico-arrow close">&nbsp;</a>
+                                        <a href="#media" class="ico-arrow open">&nbsp;</a>
+                                        
+                                        <!-- Dropdown submenu panel start -->
+                                        <section class="submenu-panel">
+                                            
+                                            <!-- One column submenu layout start -->
+                                            <div class="colgroup single-col">
+                                                <section class="col">
+                                                    <p class="last">Welcome to Surf Station Media! Here you will find hours of surf related entertainment. Click on a category below!</p>
+                                                </section>
+                                            </div>
+                                            <!-- One column submenu layout end -->
+                                            
+                                            <!-- Horizontal separator -->
+                                            <div class="submenu-separator">&nbsp;</div>
+                                            
+                                            <!-- Four columns submenu layout start -->
+                                            <div class="colgroup six-cols">
+                                                
+                                                <!-- Column #1 -->
+                                                <section class="col submenu-links">
+                                                    <h3><a href="http://www.youtube.com/user/SurfStationReports/featured" target="_blank">YouTube Videos</a></h3>
+                                                    <ul>
+                                                        <a href="http://www.youtube.com/user/SurfStationReports/featured" target="_blank"><img src="http://www.surf-station.com/wp-content/uploads/2014/01/ss_youtube.png"></a>
+                                                    </ul>
+                                                </section>
+                                                
+                                                <!-- Column #2 -->
+                                                <section class="col submenu-links">
+                                                    <h3><a href="http://surf-station.com/category/surf/">Surf</a></h3>
+                                                    <ul>
+                                                        <a href="http://surf-station.com/category/surf/"><img src="http://www.surf-station.com/wp-content/uploads/2013/01/SurfClips.jpg"></a>
+                                                    </ul>
+                                                </section>
+                                                
+                                                <!-- Column #3 -->
+                                                <section class="col submenu-links">
+                                                    <h3><a href="http://surf-station.com/category/surf-station-product-reviews/">Product Reviews</a></h3>
+                                                    <ul>
+                                                        <a href="http://surf-station.com/category/surf-station-product-reviews/"><img src="http://www.surf-station.com/wp-content/uploads/2013/01/SurfboardReviews.jpg"></a>
+                                                    </ul>
+                                                </section>
+                                                
+                                                <!-- Column #4 -->
+                                                <section class="col submenu-links">
+                                                    <h3><a href="http://surf-station.com/category/new-in-at-the-shop/">New In At The Shop</a></h3>
+                                                    <ul>
+                                                        <a href="http://surf-station.com/category/new-in-at-the-shop/"><img src="http://surf-station.com/wp-content/uploads/2014/01/new_arrivals.png"></a>
+                                                    </ul>
+                                                </section>
+                                                
+                                                 <!-- Column #4 -->
+                                                <section class="col submenu-links">
+                                                    <h3><a href="http://surf-station.com/surfyak">Surf Yak Podcast</a></h3>
+                                                    <ul>
+                                                        <a href="http://surf-station.com/surfyak/"><img src="http://www.surf-station.com/wp-content/uploads/2013/10/surfyak.png"></a>
+                                                    </ul>
+                                                </section>
+
+                                                <!-- Column #5 -->
+                                                <section class="col submenu-links">
+                                                    <h3><a href="http://surf-station.com/desktop-wallpapers/">Desktop Wallpapers</a></h3>
+                                                    <ul>
+                                                        <a href="http://surf-station.com/desktop-wallpapers/"><img src="http://surf-station.com/wp-content/uploads/2013/09/wallpapers.jpg"></a>
+                                                    </ul>
+                                                </section>
+
+                                                
+                                            </div>
+                                            <!-- Four columns submenu layout end -->
+                                            
+                                        </section>
+                                        <!-- Dropdown submenu panel end -->
+                                        
+                                    </li>
+                                                                        <li class="parent" id="shop">
+                                        <a href="http://www.surfstationstore.com"><i class="fa fa-shopping-cart"></i> Shop</a>
+                                        <a href="#" class="ico-arrow close">&nbsp;</a>
+                                        <a href="#shop" class="ico-arrow open">&nbsp;</a>
+                                        
+                                        <!-- Dropdown submenu panel start -->
+                                        <section class="submenu-panel">
+                                   
+                                            
+                                            <!-- Four columns submenu layout start -->
+                                            <div class="colgroup five-cols">
+                                                
+                                                <!-- Column #1 -->
+                                                <section class="col submenu-links">
+                                                    <h3><a href="http://www.surfstationstore.com/shop/surfboards">Surfboards</a></h3>
+                                                    <ul>
+<li><a title="Surfboards For Sale" href="http://www.surfstationstore.com/surfboard-brands/" target="_blank">New Surfboards</a></li>
+<li><a title=" Used Surfboards For Sale" href="http://www.surfstationstore.com/used-surfboards" target="_blank">Used Surfboards</a></li>
+<li><a title="Clearance Surfboards For Sale" href="http://www.surfstationstore.com/shop/clearance-surfboards" target="_blank">Clearance Boards</a></li>
+<li><a title="Custom Surfboard Orders" href="http://www.surfstationstore.com/custom-surfboard-orders/" target="_blank">Custom Orders</a></li>
+<li><a title="More Surfboard Brands" href="http://www.surfstationstore.com/brands/" target="_blank">More Brands</a></li>
+                                                    </ul>
+                                                </section>
+                                                
+                                                <!-- Column #2 -->
+                                                <section class="col submenu-links">
+                                                    <h3><a href="http://www.surfstationstore.com/shop/surf-gear">Surf Gear</a></h3>
+                                                    <ul>
+<li><a title="Mens Wetsuits" href="http://www.surfstationstore.com/shop/mens-wetsuits" target="_blank">Mens Wetsuits</a></li>
+<li><a title="Womens Wetsuits" href="http://www.surfstationstore.com/shop/womens-wetsuits" target="_blank">Womens Wetsuits</a></li>
+<li><a title="Traction Pads" href="http://www.surfstationstore.com/shop/surf-gear-traction-pads" target="_blank">Traction Pads</a></li>
+<li><a title="Leashes" href="http://www.surfstationstore.com/shop/surf-gear-leashes" target="_blank">Leashes</a></li>
+<li><a title="Fins" href="http://www.surfstationstore.com/shop/surf-gear-shortboard-fins" target="_blank">Fins</a></li>
+<li><a title="Boardbags" href="http://www.surfstationstore.com/shop/surfboard-bags" target="_blank">Boardbags</a></li>
+                                                    </ul>
+                                                </section>
+                                                
+                                                <!-- Column #3 -->
+                                                <section class="col submenu-links">
+                                                    <h3>Apparel</h3>
+                                                    <ul>
+<li><a title="Men's Apparel" href="http://www.surfstationstore.com/shop/mens-apparel" target="_blank">Mens Clothing</a></li>
+<li><a title="Men's Footwear" href="http://www.surfstationstore.com/shop/mens-apparel-sandals" target="_blank">Mens Footwear</a></li>
+<li><a title="Women's Apparel" href="http://www.surfstationstore.com/shop/womens-apparel" target="_blank">Womens Clothing</a></li>
+<li><a title="Women's Footwear" href="http://www.surfstationstore.com/shop/womens-apparel-sandals" target="_blank">Womens Footwear</a></li>
+<li><a title="Youth Apparel" href="http://www.surfstationstore.com/shop/youth-boys-apparel" target="_blank">Youth</a></li>
+<li><a title="Toddlers Apparel" href="http://www.surfstationstore.com/shop/toddler-apparel" target="_blank">Toddlers</a></li>
+                                                    </ul>
+                                                </section>
+                                                
+                                                <!-- Column #4 -->
+                                                <section class="col submenu-links">
+                                                    <h3>Body / Skim</h3>
+                                                    <ul>
+<li><a title="Bodyboards" href="http://www.surfstationstore.com/shop/bodyboard-bodyboards" target="_blank">Bodyboards</a></li>
+<li><a title="Bodyboard Accessories" href="http://www.surfstationstore.com/shop/bodyboard-bodyboard-accessories" target="_blank">Accessories</a></li>
+<li><a title="Skimboards" href="http://www.surfstationstore.com/shop/skimboard-skimboards" target="_blank">Skimboards</a></li>
+<li><a title="Skim Accessories" href="http://www.surfstationstore.com/shop/skimboard-skim-accessories" target="_blank">Accessories</a></li>
+                                                    </ul>
+                                                </section>
+                                                                                                <section class="col submenu-links">
+                                                    <h3>SUP</h3>
+                                                    <ul>
+<li><a title="Stand Up Paddle Boards" href="http://www.surfstationstore.com/shop/sup-stand-up-paddle-boards" target="_blank">Paddle Boards</a></li>
+<li><a title="Stand Up Paddles" href="http://www.surfstationstore.com/shop/sup-paddles" target="_blank">Paddles</a></li>
+<li><a title="SUP Accessories" href="http://www.surfstationstore.com/shop/sup-stand-up-paddle-accessories" target="_blank">Accessories</a></li>
+<li><a title="Clearance/Demo SUP" href="http://www.surfstationstore.com/shop/sup-stand-up-paddle-boards-clearance" target="_blank">Clearance/Demo</a></li>
+                                                    </ul>
+                                                </section>
+                                                
+                                            </div>
+                                            <!-- Four columns submenu layout end -->
+                                                                                        <div class="colgroup single-col">
+                                                <section class="col">
+                                                    <center><a href="http://cisurfboardsreview.com/" target="_blank"><img src="http://www.surf-station.com/wp-content/uploads/2013/04/buyersguide1.png"></a></center>
+                                                </section>
+                                            </div>
+                                        </section>
+  
+                                        
+                                    </li>
+                                                                        <li class="parent" id="gnd">
+                                        <a href="http://surf-station.com/girl-next-door/"><i class="fa fa-heart"></i> Women's</a>
+                                        <a href="#" class="ico-arrow close">&nbsp;</a>
+                                        <a href="#gnd" class="ico-arrow open">&nbsp;</a>
+                                        
+                                        <!-- Dropdown submenu panel start -->
+                                        <section class="submenu-panel">
+                                            
+                                            <!-- One column submenu layout start -->
+                                            <div class="colgroup single-col">
+                                                <section class="col">
+                                                    <p class="last">The Girl Next Door Surf Shop is connected to the Surf Station's main shop. This all-girl run surf shop will help you with everything from picking out the hottest new styles, to sizing you up for a wetsuit and surfboard. </p>
+                                                </section>
+                                            </div>
+                                            <!-- One column submenu layout end -->
+                                            
+                                            <!-- Horizontal separator -->
+                                            <div class="submenu-separator">&nbsp;</div>
+                                            
+                                            <!-- Four columns submenu layout start -->
+                                            <div class="colgroup four-cols">
+                                                
+                                                <!-- Column #1 -->
+                                                <section class="col submenu-links">
+                                                    <h3><a href="http://www.surfstationstore.com/womens-apparel/">Apparel Lookbook</a></h3>
+                                                    <ul>
+                                                        <a href="http://www.surfstationstore.com/womens-apparel/"><img src="http://www.surf-station.com/wp-content/uploads/2011/11/look_book.png"></a>
+                                                    </ul>
+                                                </section>
+                                                
+                                                <!-- Column #2 -->
+                                                <section class="col submenu-links">
+                                                    <h3><a href="http://surf-station.com/girl-next-door/">GND News</a></h3>
+                                                    <ul>
+                                                        <a href="http://surf-station.com/girl-next-door/"><img src="http://www.surf-station.com/wp-content/uploads/2011/11/gnd_news1.png"></a>
+                                                    </ul>
+                                                </section>
+                                                
+                                                <!-- Column #3 -->
+                                                <section class="col submenu-links">
+                                                    <h3><a href="http://surf-station.com/surf-team-2/">GND Surf Team</a></h3>
+                                                    <ul>
+                                                        <a href="http://surf-station.com/surf-team-2/"><img src="http://www.surf-station.com/wp-content/uploads/2011/11/gnd_surf_team.png"></a>
+                                                    </ul>
+                                                </section>
+                                                
+                                                <!-- Column #4 -->
+                                                <section class="col submenu-links">
+                                                    <h3><a href="http://www.surfstationstore.com/shop/womens-apparel">Shop Online</a></h3>
+                                                    <ul>
+                                                        <a href="http://www.surfstationstore.com/shop/womens-apparel"><img src="http://www.surf-station.com/wp-content/uploads/2011/11/shopn_online.png"></a>
+                                                    </ul>
+                                                </section>
+                                                
+                                            </div>
+                                            <!-- Four columns submenu layout end -->
+                                            
+                                        </section>
+                                        <!-- Dropdown submenu panel end -->
+                                        
+                                    </li>
+<!-- Second Top level menu item. If there is a submenu, the <li> element should have class name "parent" and unique ID -->
+                                    <li class="parent" id="social">
+                                        <a href="/register/"><i class="fa fa-bullhorn"></i> Social</a>
+                                        <a href="#" class="ico-arrow close">&nbsp;</a>
+                                        <a href="#social" class="ico-arrow open">&nbsp;</a>
+                                        
+                                        <!-- Dropdown submenu panel start -->
+                                        <section class="submenu-panel">
+                                            
+                                            <!-- One column submenu layout start -->
+                                            <div class="colgroup single-col">
+                                                <section class="col">
+                                                    <p class="last">At Surf Station, we're all about being social and interacting with our customers. Get social with us, knowledge is power! </p>
+                                                </section>
+                                            </div>
+                                            <!-- One column submenu layout end -->
+                                            
+                                            <!-- Horizontal separator -->
+                                            <div class="submenu-separator">&nbsp;</div>
+                                            
+                                            <!-- Four columns submenu layout start -->
+                                            <div class="colgroup six-cols">
+                                                
+                                                <!-- Column #1 -->
+                                                <section class="col submenu-links">
+                                                    <h3><a href="http://surf-station.com/register/">Premium Membership</a></h3>
+                                                    <ul>
+                                                        <a href="http://surf-station.com/register/"><img src="http://surf-station.com/wp-content/uploads/2013/07/premium.png"></a>
+                                                    </ul>
+                                                </section>
+                                                
+                                                <!-- Column #2 -->
+                                                <section class="col submenu-links">
+                                                    <h3><a href="http://surf-station.com/forums/">Messageboard</a></h3>
+                                                    <ul>
+                                                        <a href="http://surf-station.com/forums"><img src="http://surf-station.com/wp-content/uploads/2013/07/message.png"></a>
+
+                                                    </ul>
+                                                </section>
+                                                
+                                                <!-- Column #3 -->
+                                                <section class="col submenu-links">
+                                                    <h3><a href="http://surf-station.com/surf-station-enewsletter/">eNewsletter</a></h3>
+                                                    <ul>
+                                                        <a href="http://surf-station.com/surf-station-enewsletter/"><img src="http://surf-station.com/wp-content/uploads/2014/01/eNewsletter.png"></a>
+                                                    </ul>
+                                                </section>
+                                                <!-- Column #4 -->
+                                                <section class="col submenu-links">
+                                                    <h3><a href="http://surf-station.com/events/">Events Calendar</a></h3>
+                                                    <ul>
+                                                        <a href="http://surf-station.com/events/"><img src="http://www.surf-station.com/wp-content/uploads/2013/06/calendar.png"></a>
+                                                    </ul>
+                                                </section>
+                                                <!-- Column #4 -->
+                                                <section class="col submenu-links">
+                                                    <h3><a href="http://surf-station.com/member-surf-stories/">Reader Surf Submissions</a></h3>
+                                                    <ul>
+                                                        <a href="http://surf-station.com/member-surf-stories/"><img src="http://surf-station.com/wp-content/uploads/2013/09/submit-photos.jpg"></a>
+                                                    </ul>
+                                                </section>
+                                                <!-- Column #5 -->
+                                                <section class="col submenu-links">
+                                                    <h3><a href="http://surf-station.com/letters/">Letters</a></h3>
+                                                    <ul>
+                                                        <a href="http://surf-station.com/letters/"><img src="http://www.surf-station.com/wp-content/uploads/2013/06/letters.png"></a>
+                                                    </ul>
+                                                </section>
+              
+                                                
+                                            </div>
+                                            <!-- Four columns submenu layout end -->
+                                            
+                                        </section>
+                                        <!-- Dropdown submenu panel end -->
+                                        
+                                    </li>
+                                                                        <li class="parent" id="contact">
+                                        <a href="http://surf-station.com/contact-us/"><i class="fa fa-envelope"></i> Contact</a>
+                                        
+                                    </li>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                    </ul>
+                </nav>
+                <!-- End of Top level items list. -->
+                        
+            </div>
+        </div>
+        <!-- End of Responsive Dropdown Menu wrapper. -->
+    
   </div>
+  <div id="wrapper" class="clearfix">
   <div id="fixedHeaderSpacer"></div>
-  <div class="infoArea">
-    <div id="infoHeader"><div id="location">St. Augustine Beach, FL 32080 Current Weather</div><div id="infoSubHeader"><a id="gpsLink" target="_blank" href="http://maps.googleapis.com/maps/api/staticmap?center=29.84685,-81.266133&zoom=13&scale=2&size=300x300&format=png&sensor=false&markers=29.84685,-81.266133">GPS: 29&deg; 50.811&apos; N; 81&deg; 15.968&apos; W - 40 FT</a> <span id="asOf">As of <span id="stationDate"></span> <span id="stationTime"></span></span></div></div>
-    <div class="dataBox"><div class="dataValue"><span id="outsideTemp"></span><span class="tempUnit"></span></div><div class="dataName">Temperature</div></div>
-    <div class="dataBox"><div class="dataValue">From <span id="windDirection"></span> (<span id="windDirectionDegrees"></span>&deg;) <span id="windSpeed"></span> <span class="windUnit"></span></div><div class="dataName">Wind</div></div>
-    <div class="dataBox"><div class="dataValue"><span id="windGustSpeed"></span> <span class="windUnit"></span></div><div class="dataName">Wind Gust</div></div>
-    <div class="dataBox"><div class="dataValue"><span id="sunriseTime"></span></div><div class="dataName">Sunrise</div></div>
-    <div class="dataBox"><div class="dataValue"><span id="sunsetTime"></span></div><div class="dataName">Sunset</div></div>
-    <div id="windChillDataBox" class="dataBox"><div class="dataValue"><span id="windChill"></span><span class="tempUnit"></span></div><div class="dataName">Wind Chill</div></div>
-    <div id="outsideHeatIndexDataBox" class="dataBox"><div class="dataValue"><span id="outsideHeatIndex"></span><span class="tempUnit"></span></div><div class="dataName">Heat Index</div></div>
-    <div class="dataBox"><div class="dataValue"><img id="moonFromEarth" src="http://weather.surf-station.com/moon.png" title="Current View of the Moon from Earth" /><span id="moonPhase"></span></div><div class="dataName">Moon</div></div>
-    <div class="dataBox"><div class="dataValue"><span id="barometer"></span> <span class="barUnit"></span> <span id="baromtrend"></span></div><div class="dataName">Pressure</div></div>
-    <div class="dataBox"><div class="dataName"><a class="moreInfo" href="http://weather.surf-station.com/wx/index.html">More Detailed Weather Information and History</a></div></div>
-    <div class="dataBox"><div class="dataName"><a class="moreInfo" href="http://weather.surf-station.com/about.html">About this Weather Station</a></div></div>
-  </div>
-  <div class="infoArea2">
-    <img class="chart" src="http://weather.surf-station.com/wx/tempdaycomp.png" title="Today's Temperature" />
+  <h1 class="header"> UP TO THE MINUTE WEATHER, ST AUGUSTINE BEACH, FL </h1>
+<div class="header-strips-one"></div>
+<h4 class="sub-header"> LAST UPDATED <span id="stationDate"></span> <span id="stationTime"></span> | WEATHER STATION LOCATED AT <a id="gpsLink" target="_blank" href="http://maps.googleapis.com/maps/api/staticmap?center=29.84685,-81.266133&zoom=13&scale=2&size=300x300&format=png&sensor=false&markers=29.84685,-81.266133">GPS: 29&deg; 50.811&apos; N; 81&deg; 15.968&apos; W - 40 FT</a></h4>
+<div class="header-strips-one"></div>
+
+<!-- Begin new Content Code -->
+<row>
+<div class="col-md-8">
+<row>
+<div class="col-md-6 padbot">
+<a href="about.html" class="btn btn-lg btn-primary padbot" type="button">About This Weather Station</a>
+</div>
+<div class="col-md-6 padbot">
+<a href="wx/index.html" class="btn btn-lg btn-primary padbot" type="button">More Detailed Weather</a>
+
+</div>
+</row>
+<row>
+<div class="col-md-4">
+<div class="boxes blue">
+<h4>Temperature</h4>
+<div class="header-strips-two"></div>
+<h1><span id="outsideTemp"></span><span class="tempUnit"></span></h1>
+</div>
+</div>
+<div class="col-md-4">
+<div class="boxes yellow">
+<h4>Wind Direction (From)</h4>
+<div class="header-strips-two"></div>
+<h1><span id="windDirection"></span> (<span id="windDirectionDegrees"></span>&deg;)</h1>
+</div>
+</div>
+<div class="col-md-4">
+<div class="boxes blue">
+<h4>Wind Speed</h4>
+<div class="header-strips-two"></div>
+<h1><span id="windSpeed"></span> <span class="windUnit"></span></h1>
+</div>
+</div>
+</row>
+<row>
+<div class="col-md-4">
+<div class="boxes yellow">
+<h4>Wind Gust</h4>
+<div class="header-strips-two"></div>
+<h1><span id="windGustSpeed"></span> <span class="windUnit"></span></h1>
+</div>
+</div>
+<div class="col-md-4">
+<div class="boxes blue">
+<h4>Today's Sunrise</h4>
+<div class="header-strips-two"></div>
+<h1><span id="sunriseTime"></span></h1>
+</div>
+</div>
+<div class="col-md-4">
+<div class="boxes yellow">
+<h4>Today's Sunset</h4>
+<div class="header-strips-two"></div>
+<h1><span id="sunsetTime"></span></h1>
+</div>
+</div>
+</row>
+<row>
+<div class="col-md-4">
+<div class="boxes blue">
+<h4>Heat Index</h4>
+<div class="header-strips-two"></div>
+<h1><span id="outsideHeatIndex"></span><span class="tempUnit"></span></h1>
+</div>
+</div>
+<div class="col-md-4">
+<div class="boxes yellow">
+<h4>Moon</h4>
+<div class="header-strips-two"></div>
+<h3><span id="moonPhase"></span></h3>
+<img id="moonFromEarth" src="http://weather.surf-station.com/moon.png" title="Current View of the Moon from Earth" />
+</div>
+</div>
+<div class="col-md-4">
+<div class="boxes blue">
+<h4>Pressure</h4>
+<div class="header-strips-two"></div>
+<h1><span id="barometer"></span> <span class="barUnit"></span> <span id="baromtrend"></span></h1>
+</div>
+</div>
+</row>
+<row>
+<div class="col-md-12">
+<h1 class="header">Latest Surf Cam Snapshot</h1>
+<div class="header-strips-one"></div>
+<img src="http://images.surf-station.com/wavecam/latest.jpg" title="Latest Snapshot from The Surf Station Wavecam" style="width: 100%;"/>
+</div>
+</row>
+
+</div>
+
+
+<div class="col-md-4 pull-right">
+<script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Main -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-4650334183553750"
+     data-ad-slot="9321468021"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<h1 class="header">More Info</h1>
+<div class="header-strips-one"></div>
+
+
+<row>
+<div class="col-md-12">
     <img class="chart" src="http://weather.surf-station.com/wx/rainday.png" title="Today's Rain" />
     <img class="chart" src="http://weather.surf-station.com/wx/wspeeddaycomp.png" title="Today's Wind Speed" />
     <img class="dial" src="http://weather.surf-station.com/wx/wind.png" title="Wind Direction" />
     <a target="_blank" href="http://en.wikipedia.org/wiki/Wind_rose" title="What is a wind rose?"><img class="dial" src="http://weather.surf-station.com/wx/windroseday.png" title="Today's Wind Rose" /></a>
     <img class="chart" src="http://weather.surf-station.com/wx/dayrain.png" title="Today's Rain" />
-  </div>
-  <div class="infoArea2">
-    <img src="http://images.surf-station.com/wavecam/latest.jpg" title="Latest Snapshot from The Surf Station Wavecam" />
-  </div>
-  <div style="clear: both;"></div>
-  <div id="footer">
-    Check out our other sites: <a href="http://www.surf-station.com/">www.surf-station.com</a> | <a href="http://m.surf-station.com/">m.surf-station.com</a> | <a href="http://www.surfstationstore.com/">www.surfstationstore.com</a>
-  </div>
+<div class="header-strips-one"></div>    
+    <script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Main -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-4650334183553750"
+     data-ad-slot="9321468021"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</row>
+</div>
+
+</row>
+<!-- End New Code -->
+</div>
+</div>
+<div id="footer" class="clearfix">
+	
+    <div id="footer-wrapper">
+    
+        <div class="grid col-940" style="margin-bottom: 20px;">
+         
+			<div id="social-bottom"><strong><center>SO MANY WAYS TO STAY CONNECTED WITH US! CLICK ON A LINK BELOW!</center></strong><br />
+                     <center><a href="http://www.facebook.com/SurfStation" target="_blank"><img src="http://surf-station.com/wp-content/uploads/2013/06/SS_Facebook.jpg" title="Surf Station Facebook" alt="Surf Station Facebook" width="40" height="39" hspace="5" /></a><a
+href="http://www.facebook.com/?ref=logo#!/pages/Surf-Station-2-the-Deuce/117098551669396" target="_blank"><img
+src="http://surf-station.com/wp-content/uploads/2013/09/BlogFooterFBSSII.jpg" title="Surf Station 2 Facebook" alt="Surf Station 2 Facebook" width="40" height="39" hspace="5" /></a><a
+href="http://www.facebook.com/GNDSurf?ref=ts" target="_blank"><img src="http://surf-station.com/wp-content/uploads/2013/09/BlogFooterFBGND.jpg" title="Girl Next Door Facebook" alt="Girl Next Door Facebook" width="40" height="39" hspace="5" /></a><a href="http://twitter.com/surfstation" target="_blank"><img
+src="http://surf-station.com/wp-content/uploads/2013/09/BlogFooterTW.jpg" title="Surf Station Twitter" alt="Surf Station Twitter" width="40" height="39" hspace="5" /></a><a href="http://twitter.com/surfstation" target="_blank"><img
+src="http://surf-station.com/wp-content/uploads/2013/06/GND_Twitter.jpg" title="Girl Next Door Twitter"  alt="Girl Next Door Twitter" width="40" height="39" hspace="5" /></a><a
+href="http://instagram.com/thesurfstation" target="_blank"><img
+src="http://surf-station.com/wp-content/uploads/2013/06/SS_Instag.jpg" title="Surf Station Instagram" alt="Surf Station Instagram" width="40" height="39" hspace="5" /></a><a
+href="http://www.youtube.com/user/SurfStationReports" target="_blank"><img
+src="http://surf-station.com/wp-content/uploads/2013/09/BlogFooterYT.jpg" title="Surf Station YouTube" alt="Surf Station YouTube" width="40" height="39" hspace="5" /></a><a
+href="http://pinterest.com/thesurfstation/" target="_blank"><img
+src="http://surf-station.com/wp-content/uploads/2013/06/SS_Pintrest.jpg" title="Surf Station Pinterest"  alt="Surf Station Pinterest" width="40" height="39" hspace="5" /></a><a
+href="http://pinterest.com/gndsurf/" target="_blank"><img
+src="http://surf-station.com/wp-content/uploads/2013/06/GND_Pinterest.jpg" title="Girl Next Door Pinterest" alt="Girl Next Door Pinterest" width="40" height="39" hspace="5" /></a><a
+href="http://www.surf-station.com/contact/" target="_blank"><img
+src="http://surf-station.com/wp-content/uploads/2013/06/SS_Email.jpg" title="Surf Station Email" alt="Surf Station Email" width="40" height="39" hspace="5" /></a>
+<a
+href="http://visitor.r20.constantcontact.com/manage/optin/ea?v=001uIM2HFQzzSaN2ubcp7xgGc0Bszeo0xzZb1mv6O3AhPxuqsz-BqQx_YAjZHjf_wRgnXqlT8iS-RZkdYAUXbKobQ%3D%3D" target="_blank"><img
+src="http://surf-station.com/wp-content/uploads/2013/06/SS_Newsletter.jpg" title="Surf Station Newsletter" alt="Surf Station Newsletter" width="40" height="39" hspace="5" /></a>
+<a
+href="http://www.surfstationstore.com/" target="_blank"><img
+src="http://surf-station.com/wp-content/uploads/2013/06/SS_Live_Chat.jpg" title="Surf Station Live Chat" alt="Surf Station Live Chat" width="40" height="39" hspace="5" /></a>
+<a
+href="http://community.surf-station.com/index.php" target="_blank"><img
+src="http://surf-station.com/wp-content/uploads/2013/06/SS_Messageboard.jpg" title="Surf Station Messageboard" alt="Surf Station Messageboard" width="40" height="39" hspace="5" /></a><a
+href="http://www.surf-station.com/contact/" target="_blank"><img
+src="http://surf-station.com/wp-content/uploads/2013/06/SS_Call_Text.jpg" title="Surf Station Call/Text" alt="Surf Station Call/Text" width="40" height="39" hspace="5" /></a></center></div>
+         
+         </div><!-- end of col-940 -->
+         <div class="row">       
+         
+                   <div class="col-md-2 footer-column"><strong><a href="http://surf-station.com/">SURF</a></strong><br/>
+                       <a href="http://surf-station.com/">Surf Report</a><br />
+                       <a href="http://surf-station.com/north-florida-surf-forecast/">Surf Forecast</a><br />
+                       <a href="http://tidesandcurrents.noaa.gov/noaatidepredictions/NOAATidesFacade.jsp?Stationid=8720587" target="_blank">NOAA Tide Chart</a><br />
+                       <a href="http://www.surf-station.com/surf-team-2/">Surf Team</a><br />
+                       <a href="http://surf-station.com/st-augustine-hd-wave-cam/">HD Wavecam</a><br />
+                       <a href="http://surf-station.com/2011/02/surf-camp/">Surf Camp</a><br />
+                       <a href="http://surf-station.com/lessons-party-wave-birthdays/">Surf Lessons</a><br />
+                       <a href="http://www.surf-station.com/hammock-beach-surf-lessons/">Hammock Beach Surf Lessons</a><br />
+                       <a href="http://surf-station.com/ding-repair/">Ding Repair</a><br />
+                       <a href="http://surf-station.com/surfboard-custom-orders/">Custom Surfboards</a><br />
+                       <a href="http://surf-station.com/st-augustine-surf-camp/">St. Augustine Surf Camp</a></div>
+                   <div class="col-md-2 footer-column">
+                     	<strong><a href="http://surf-station.com/category/surf/">MEDIA</a></strong><br/>
+                        <a href="http://surf-station.com/st-augustine-hd-wave-cam/">HD Wavecam</a><br />
+                        <a href="http://surf-station.com/category/stationmedia/surfreportvideos/">Surf Report Videos</a><br />
+                     	<a href="http://surf-station.com/category/stationmedia/surfclips/">Surf Clips</a><br/>
+                     	<a href="http://surf-station.com/category/surf-station-product-reviews/">Board Reviews</a><br />
+                     	<a href="http://surf-station.com/category/surf-station-product-reviews/">Product Reviews</a><br />
+                        <a href="http://www.surf-station.com/category/stationmedia/surf-and-skate-tutorials/">Tutorials</a><br />
+                        <a href="http://community.surf-station.com/" target="_blank">Message Board</a><br />
+                   </div>
+                   <div class="col-md-2 footer-column">
+                   		<strong><a href="http://surf-station.com/surf-station-history/">ABOUT US</a></strong><br />
+                       <a href="http://surf-station.com/contact-us/">Contact</a><br />
+                       <a href="http://community.surf-station.com/">Message Board</a><br />
+                       <a href="http://surf-station.com/letters/">Letters</a><br />
+                       <a href="http://surf-station.com/surf-sup-rental-rates/">Rental Rates</a><br />
+                       <a href="http://surf-station.com/lessons-party-wave-birthdays/">Party Wave Birthdays</a><br />
+                       <a href="http://surf-station.com/surf-station-advertising/">Online Advertising</a><br />
+                       <a href="http://www.surf-station.com/events/">Event Calendar</a><br />
+                       <a href="http://www.surfstationstore.com/">Shop Online</a>
+                   </div>
+                   
+                   <div class="col-md-2 footer-column">
+                     	<strong><a href="http://www.surfstationstore.com/" title="Shop Surf Station Store">SHOP ONLINE</a></strong><br/>
+                   <a href="http://www.surfstationstore.com/channel-islands-surfboards/" title="Channel Islands Surfboards">Channel Islands Surfboards</a><br />
+                       <a href="http://www.surfstationstore.com/lost-surfboards" title="Lost Surfboards">...Lost Surfboards</a><br />
+                   <a href="http://www.surfstationstore.com/Firewire-Surfboards" title="Firewire Surfboards">Firewire Surfboards</a><br />
+                       <a href="http://www.surfstationstore.com/used-surfboards">Used Surfboards</a><br />
+                       <a href="http://www.surfstationstore.com/shop/clearance-surfboards">Clearance Surfboards</a><br />
+                       <a href="http://www.surfstationstore.com/shop/collector-boards">Collector Surfboards</a><br />
+                       <a href="http://www.surfstationstore.com/shop/mens-wetsuits">Mens Wetsuits</a><br />
+                       <a href="http://www.surfstationstore.com/shop/womens-wetsuits">Womens Wetsuits</a><br />
+                       <a href="http://www.surfstationstore.com/shop/surfboard-accessories">Surfboard Accessories</a><br />
+                       <a href="http://www.surfstationstore.com/shop/mens-apparel">Mens Apparel</a><br />
+                       <a href="http://www.surfstationstore.com/shop/womens-apparel">Womens Apparel</a><br />
+                     <a href="http://www.surfstationstore.com/shop/sup">Stand Up Paddle</a>
+                   </div>
+                   <div class="col-md-2 footer-column"><strong><a
+href="http://www.surfstationstore.com/shop/skate">SKATE</a></strong><br />
+                   	 <a href="http://www.surfstationstore.com/shop/skate">Shop Online</a><br /><br />
+                   	 <strong><a href="http://www.gndsurf.com/" title="Girl Next Door Surf Shop">GIRL NEXT DOOR</a></strong><br/>
+                     <a href="http://www.gndsurf.com/category/news/">GND News</a><br />
+                       <a href="http://www.gndsurf.com/look-book/">Apparel Lookbook</a><br />
+                       <a href="http://www.gndsurf.com/girls-surf-team/">GND Surf Team</a><br />
+                       <a href="http://www.gndsurf.com/category/gnd-media/girls-surf-clips/">Girl Surf Clips</a><br />
+                       <a href="http://www.gndsurf.com/category/gnd-media/girl-fashion-tips/">Fashion Tips</a><br />
+                       <a href="http://www.gndsurf.com/category/gnd-media/girl-skate-clips/">Girl Skate Clips</a><br />
+                     <a href="http://www.surfstationstore.com/Womens">Shop Online </a>
+                     </div>
+                   <div class="col-md-2 footer-column last-column">
+                   		<strong><a href="http://surf-station.com" title="Surf Station News">BLOGS</a></strong><br />
+                   		<a href="http://www.surf-station.com/author/surfnews/" title="Surf Industry News">Surf Industry News</a><br />
+                   		<a href="http://www.surf-station.com/author/surfcamp/" title="Surf Camp Blog">Surf Camp Blog</a><br />
+                   		<a href="http://surf-station.com/category/new-in-at-the-shop/" title="New in at the Shop">New at the Shop</a><br />
+                   		<a href="http://surf-station.com/category/girls/out-fit-of-the-day/" title="Outfit of the Day">Outfit of the Day</a><br />
+                   		<a href="http://surf-station.com/author/amart/" title="Austin Martin">Austin Martin</a><br />
+                   		<a href="http://surf-station.com/author/matto/" title="Matt Ollis">Matt Ollis</a><br />
+                   		<a href="http://surf-station.com/author/zander/" title="Zander Morton">Zander Morton</a><br />
+                   		<a href="http://surf-station.com/author/tomk/" title="Tom Kiernan">Tom Kiernan</a><br />
+                   		<a href="http://surf-station.com/author/chelsea/" title="Cullen Traverso">Chelsea Gresham</a><br />
+                   		<a href="http://www.surf-station.com/2011/07/links-to-more-bloggers-2/" title="More Bloggers">More Bloggers</a>
+               		</div>
+         </div>
+         <br clear="all">
+                               
+				<div class="row footer-small">
+					<div class="col-md-4">
+               			<a href="http://surf-station.com/contact-us/"><img src="http://www.surfstationstore.com/templates/ssstore/images/The-Surf-Station.jpg" width="133" height="100" alt="The Surf Station" style="margin: 0 0 5px 0px;" /></a><br />
+                        <strong>ST. AUGUSTINE SURF STATION</strong><br />
+         				1020 Anastasia Blvd.<br />
+       					St. Augustine, FL 32080 <br />
+       					<strong>Surf Station (St Augustine):</strong> (904) 471-9463 <br />
+       					<strong>Surf Station (Toll Free):</strong>    (800) 460-6394  <br />
+       					<strong>Surf Report:</strong>    (904) 471-1122  <br />
+               			<strong>Store Hours:</strong> 8am - 9pm 7 Days a week!<br /> 
+               		</div>
+         			<div class="col-md-4">
+                    	<a href="http://www.gndsurf.com" target="_blank"><img src="http://www.surfstationstore.com/templates/ssstore/images/TheGirlNextDoor.jpg" width="133" height="100" alt="Girl Next Door" style="margin: 0 0 5px 0px;" /></a><br />
+               			<strong>GIRL NEXT DOOR SURF SHOP</strong><br />
+           				1020 Anastasia Blvd.<br />
+         				St. Augustine, FL 32080 <br />
+         				<strong>Call:</strong> (904) 461-1441<br />
+                    	<strong>Store Hours:</strong> 8am - 9pm 7 Days a week!<br />
+                 		<strong>Website:</strong> <a href="http://www.gndsurf.com" title="Girl Next Door Surf Shop" target="_blank">http://www.gndsurf.com</a><br />
+                	</div>
+         			<div class="col-md-4">
+                    	<a href="http://surf-station.com/contact-us/"><img src="http://www.surfstationstore.com/templates/ssstore/images/The-Deuce2.jpg" width="133" height="100" alt="The Deuce" style="margin: 0 0 5px 0px;" /></a><br />
+                		<strong>SURF STATION 2 'THE DEUCE'</strong><br />
+                 		6880 A1A South<br />
+        				St. Augustine, FL 32080 <br />
+           				<strong>Surf Station II (Crescent Beach):</strong> (904) 461-5395  <br />
+         				<strong>Surf Station II (Toll Free):</strong> (800) 685-CURL <br />
+                    	<strong>Store Hours:</strong> 9am - 6pm 7 Days a week!<br />
+         			</div>
+                </div>
+             <br clear="all">   
+        <div class="row footer-small">
+					<div class="col-md-4">
+            &copy; 2014<a href="http://surf-station.com/" title="Surf Station Surf Report">
+                Surf Station
+            </a>
+        </div><!-- end of .copyright -->
+        
+        <div class="col-md-4 scroll-top"></div>
+        
+        <div class="col-md-4 powered">
+Powered By <a href="http://www.surf-station.com" target="_blank">Surf Station Studios</a>
+        </div><!-- end .powered -->
+        </div>
+        <br clear="all" />
+    </div><!-- end #footer-wrapper -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-39872391-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>    
+	</div><!-- end #footer -->
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
   <script>
   var SurfStation = SurfStation || {};
@@ -212,6 +854,17 @@
   });
   </script>
   <script src="http://weather.surf-station.com/wx/wxdata.json"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-39872391-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
 </body>
 </html>
 

@@ -1,0 +1,98 @@
+/*******************************************
+ * Responsive Dropdown Menu: Color schemes *
+ * Light scheme                            *
+ *******************************************/
+
+
+
+.rdd-menu-wrapper {
+    background: #fff;
+}
+
+.rdd-menu > ul {
+    color: #7c7b7b;
+}
+
+.rdd-menu > ul > li > a,
+.rdd-menu > ul > li > span {
+    color: #878686;
+    text-shadow: 1px 1px 1px #efefef;
+}
+
+.rdd-menu > ul > li:hover,
+.rdd-menu li.active,
+.rdd-menu .submenu-panel,
+.submenu-panel .related-info {
+    background: url('../images/white-fabric-texture.jpg') repeat 0 0 #dedede;
+}
+
+.rdd-menu > ul > li:target {
+    background: url('../images/bg-menu-light.png') repeat 0 0 #dedede;
+}
+
+.rdd-menu > ul > li:hover > a,
+.rdd-menu > ul > li:hover > span,
+.rdd-menu li.active > span,
+.rdd-menu li.active > span:hover  {
+    color: #373636;
+}
+
+.rdd-menu ul ul > li > a {
+    color: #5b5b5b;
+    text-shadow: 1px 1px 1px #efefef;
+    background-image: url('../images/rddm-images/icons-sprite-light.png');
+}
+
+.rdd-menu ul ul > li > a:hover,
+.rdd-menu ul.multilevel li:hover > a {
+    color: #1d1d1d;
+}
+
+.rdd-menu .ico-arrow {
+    background-image: url('../images/rddm-images/icons-sprite-light.png');
+}
+
+.rdd-menu .submenu-panel {
+    -moz-box-shadow: 1px 1px 5px #5c5c5c;
+    -webkit-box-shadow: 1px 1px 5px #5c5c5c;
+    -o-box-shadow: 1px 1px 5px #5c5c5c;
+    -khtml-box-shadow: 1px 1px 5px #5c5c5c;
+    -ms-box-shadow: 1px 1px 5px #5c5c5c;
+    box-shadow: 1px 1px 5px #d6d6d6;
+}
+
+.rdd-menu .submenu-panel h2,
+.rdd-menu .submenu-panel .h2,
+.rdd-menu .submenu-panel h3,
+.rdd-menu .submenu-panel .h3,
+.rdd-menu .submenu-panel h4,
+.rdd-menu .submenu-panel .h4 {
+    color: #373636;
+    text-shadow: 1px 1px 1px #efefef;
+}
+
+.rdd-menu .submenu-panel h3,
+.rdd-menu .submenu-panel .h3 {
+    background: url('../images/rddm-images/dotted-line-light.png') repeat-x 0 100%;
+}
+
+.rdd-menu .submenu-panel .submenu-separator {
+    background: url('../images/rddm-images/bg-separator-hor-light.png') repeat-x 0 0;
+}
+
+.rdd-menu .submenu-panel .col.submenu-map-wrapper,
+.rdd-menu .submenu-panel .col.submenu-info {
+    background: url('../images/rddm-images/bg-separator-ver-light.png') no-repeat 100% 30px;
+}
+
+a.social-link {
+    background: url('../images/rddm-images/icons-sprite-light.png') no-repeat 0 -25px;
+}
+
+/* All Desktop Sizes (devices and browser) */
+@media only screen and (min-width: 959px) {
+    .rdd-menu > ul > li.parent > a,
+    .rdd-menu > ul > li.parent > span {
+        background-image: url('../images/rddm-images/icons-sprite-light.png');
+    }
+}

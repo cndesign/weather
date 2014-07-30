@@ -1,0 +1,185 @@
+/* =Globals
+-------------------------------------------------------------- */
+body {
+	-moz-font-smoothing: antialiased;
+	-webkit-font-smoothing: antialiased;
+	background: url(../images/bg-surf.jpg) #c2d2e1 no-repeat center top fixed;
+	color: #555;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-smoothing: antialiased;
+	line-height: 1.5em;
+	text-rendering: optimizeLegibility;
+}
+
+#container {
+	margin: 0 auto;
+	max-width: 1180px;
+	padding: 20px 40px 5px 40px;
+	background: rgba(255,255,255,0.5);
+
+
+}
+
+#wrapper {
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	background-color: #fff;
+	clear: both;
+	margin: 0px auto 20px auto;
+	padding: 0 20px 20px 20px;
+	position: relative;
+}
+
+.front-page #wrapper {
+	background-color: #fff;
+	border: none;
+	margin: 20px auto 20px auto;
+	padding: 0;
+
+}
+
+#header {
+	margin: 0;
+	max-width: 1180px;
+	min-height: 167px;
+	background: #fff;
+	height: 100%;
+}
+
+#footer {
+	clear: both;
+	margin: 0 auto;
+	max-width: 1180px;
+	padding: 0px 40px 20px 40px;
+	background: rgba(255,255,255,0.5);
+}
+
+#footer-wrapper {
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	margin: 0px auto 20px auto;
+	padding: 0 20px 20px 20px;
+	background: #fff;
+}
+.footer-column {
+	border-right: 1px dashed #666;
+	height: auto;
+	font-size: 10px;
+	line-height: 14px;
+	height: 200px;
+	
+	
+}
+.footer-column a {
+	color: #666; 
+	}
+.last-column {
+	border-right: none;
+}
+.footer-small {
+	font-size: 12px;
+	color: #666;
+	line-height: 17px;
+}
+
+.header {
+	font-family: 'PT Sans Narrow',sans-serif;
+	text-align: center;
+}
+.header-strips-one {
+    border-top: 1px solid #d0d0d0;
+    height: 1px;
+    margin: 20px auto 19px;
+    position: relative;
+    width: 70px;
+}
+.header-strips-two {
+    border-top: 1px solid #d0d0d0;
+    height: 1px;
+    margin: 5px auto 5px;
+    position: relative;
+    width: 70px;
+}
+.sub-header {
+	font-family: 'PT Sans Narrow',sans-serif;
+	text-align: center;
+}
+
+/* =Header
+-------------------------------------------------------------- */
+#logo {
+	float: left;
+	margin: 0;
+	padding: 20px 0 20px 20px;
+	width: 20%;
+}
+
+.site-name {
+	display: block;
+	font-size: 2.063em; /* = 33px */
+    line-height: 1.0em;
+	padding-top: 20px;
+}
+
+.site-name a {
+    color: #333;
+	font-weight: 700;
+}
+
+.site-description {
+    color: #afafaf;
+	display: block;
+	font-size: 0.875em; /* = 14px */
+	margin: 10px 0;
+}
+
+/* =Content
+-------------------------------------------------------------- */
+#content {
+	margin-top: 5px;
+	margin-bottom: 20px;
+}
+
+#content-full {
+	margin-top: 10px;
+	margin-bottom: 5px;
+}
+.boxes {
+	text-align: center;
+	border: 1px #555 dashed;
+	padding: 2px;
+	font-family: 'PT Sans Narrow',sans-serif;
+	margin-bottom: 30px;
+}
+.boxes img {
+	width: 100%;
+}
+.blue {
+	background: #d8eef3;
+}
+.yellow {
+	background: #f3f0d8;
+}
+.padbot {
+	margin-bottom: 10px;
+	margin: 0 auto 10px;
+	text-align: center;
+}
+/* Menu */
+.rdd-menu .submenu-panel h3, .rdd-menu .submenu-panel .h3 {
+    font-size: 14px;
+    margin-bottom: 17px;
+    padding-bottom: 8px;
+}
+
+@media (max-width: 600px) {
+	#container {
+		padding-right: 0;
+		padding-left: 0;
+	}
+	#footer {
+		padding-right: 0;
+		padding-left: 0;
+	}
+}

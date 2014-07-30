@@ -1,0 +1,95 @@
+/*******************************************
+ * Responsive Dropdown Menu: Color schemes *
+ * Dark scheme                             *
+ *******************************************/
+
+
+
+.rdd-menu-wrapper {
+    background: url('../images/rddm-images/bg-menu.png') repeat 0 0 #1c1c1c;
+}
+
+.rdd-menu > ul {
+    color: #797979;
+}
+
+.rdd-menu > ul > li > a,
+.rdd-menu > ul > li > span {
+    color: #dddddd;
+}
+
+.rdd-menu > ul > li:hover,
+.rdd-menu li.active,
+.rdd-menu .submenu-panel,
+.submenu-panel .related-info {
+    background: url('../images/rddm-images/bg-menu.png') repeat 0 0 #0a0a0a;
+}
+
+.rdd-menu > ul > li:target {
+    background: url('../images/rddm-images/bg-menu.png') repeat 0 0 #0a0a0a;
+}
+
+.rdd-menu > ul > li:hover > a,
+.rdd-menu > ul > li:hover > span,
+.rdd-menu li.active > span,
+.rdd-menu li.active > span:hover  {
+    color: #ffffff;
+}
+
+.rdd-menu ul ul > li > a {
+    color: #ababab;
+    background-image: url('../images/rddm-images/icons-sprite.png');
+}
+
+.rdd-menu ul ul > li > a:hover,
+.rdd-menu ul.multilevel li:hover > a {
+    color: #fbfbfb;
+}
+
+.rdd-menu .ico-arrow {
+    background-image: url('../images/rddm-images/icons-sprite.png');
+}
+
+.rdd-menu .submenu-panel {
+    -moz-box-shadow: 1px 1px 3px #333333;
+    -webkit-box-shadow: 1px 1px 3px #333333;
+    -o-box-shadow: 1px 1px 3px #333333;
+    -khtml-box-shadow: 1px 1px 3px #333333;
+    -ms-box-shadow: 1px 1px 3px #333333;
+    box-shadow: 1px 1px 3px #333333;
+}
+
+.rdd-menu .submenu-panel h2,
+.rdd-menu .submenu-panel .h2,
+.rdd-menu .submenu-panel h3,
+.rdd-menu .submenu-panel .h3,
+.rdd-menu .submenu-panel h4,
+.rdd-menu .submenu-panel .h4 {
+    color: #bbbbbb;
+}
+
+.rdd-menu .submenu-panel h3,
+.rdd-menu .submenu-panel .h3 {
+    background: url('../images/rddm-images/dotted-line.png') repeat-x 0 100%;
+}
+
+.rdd-menu .submenu-panel .submenu-separator {
+    background: url('../images/rddm-images/bg-separator-hor.png') repeat-x 0 0;
+}
+
+.rdd-menu .submenu-panel .col.submenu-map-wrapper,
+.rdd-menu .submenu-panel .col.submenu-info {
+    background: url('../images/rddm-images/bg-separator-ver.png') no-repeat 100% 30px;
+}
+
+a.social-link {
+    background: url('../images/rddm-images/icons-sprite.png') no-repeat 0 -25px;
+}
+
+/* All Desktop Sizes (devices and browser) */
+@media only screen and (min-width: 959px) {
+    .rdd-menu > ul > li.parent > a,
+    .rdd-menu > ul > li.parent > span {
+        background-image: url('../images/rddm-images/icons-sprite.png');
+    }
+}

@@ -1,0 +1,407 @@
+/********************************************
+ * Responsive Dropdown Menu
+ * Mobile devices stylesheet
+ * 
+ * Contents:
+ * 1) Responsive Dropdown Menu: General styles
+ * 2) Responsive Dropdown Menu: Top level styles
+ * 3) Responsive Dropdown Menu: Dropdown panel styles
+ * 4) Responsive Dropdown Menu: Submenu columns
+ * 5) Responsive Dropdown Menu: Social links
+ * 6) Responsive Dropdown Menu: Media Queries
+ * 
+ ********************************************/
+
+
+
+/***********************************
+ * Responsive Dropdown Menu: General styles *
+ ***********************************/
+
+.clearfix:after {
+    clear: both;
+    content: " ";
+    display: block;
+    font-size: 0;
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+    width: 0;
+}
+
+.rdd-menu-wrapper {
+    float: left;
+    width: 100%;
+}
+
+.rdd-menu-holder {
+    float: left;
+    width: 100%;
+}
+
+.rdd-menu-wrapper * {
+    margin: 0;
+    outline: none;
+    padding: 0;
+}
+
+.rdd-menu-wrapper ul {
+    list-style-type: none;
+}
+
+.rdd-menu-wrapper a {
+    color: inherit;
+    text-decoration: underline;
+}
+
+.rdd-menu-wrapper a:hover {
+    text-decoration: none;
+}
+
+.rdd-menu-wrapper nav,
+.rdd-menu-wrapper section {
+    display: block;
+}
+
+.rdd-menu-wrapper address {
+    font-style: normal;
+}
+
+.rdd-menu {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    line-height: 22px;
+    /* Webkit browsers fonts rendering fix */
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+}
+
+
+
+/*************************************
+ * Responsive Dropdown Menu: Top level styles *
+ *************************************/
+
+.rdd-menu > ul {
+    float: left;
+    width: 100%;
+    position: relative;
+    z-index: 100;
+}
+
+.rdd-menu > ul > li {
+    float: left;
+    width: 100%;
+    position: relative;
+}
+
+.rdd-menu > ul > li > a,
+.rdd-menu > ul > li > span {
+    display: block;
+    height: 40px;
+    line-height: 39px;
+    padding: 0 7%;
+    font-size: 15px;
+    text-decoration: none;
+    position: relative;
+    z-index: 101;
+}
+
+.rdd-menu > ul > li > span {
+    cursor: default;
+}
+
+.rdd-menu .ico-arrow {
+    display: none;
+    width: 51px;
+    height: 40px;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-repeat: no-repeat;
+    background-position: -325px -6px;
+}
+
+.rdd-menu .ico-arrow.open {
+    display: block;
+}
+
+.rdd-menu .ico-arrow.close {
+    transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+}
+
+
+
+/******************************************
+ * Responsive Dropdown Menu: Dropdown panel styles *
+ ******************************************/
+
+.rdd-menu .submenu-panel {
+    display: none;
+    width: 100%;
+    padding: 20px 0 10px 0;
+    font-size: 11px;
+    line-height: 18px;
+    position: relative;
+    z-index: 102;
+    -moz-box-shadow: 0 0 0;
+    -webkit-box-shadow: 0 0 0;
+    -o-box-shadow: 0 0 0;
+    -khtml-box-shadow: 0 0 0;
+    -ms-box-shadow: 0 0 0;
+    box-shadow: 0 0 0;
+}
+
+.rdd-menu li:target > .submenu-panel {
+    display: block;
+}
+
+.rdd-menu li:target > .open {
+    display: none;
+}
+
+.rdd-menu li:target > .close {
+    display: block;
+}
+
+.rdd-menu ul ul li {
+    display: block;
+    width: 100%;
+    float: left;
+    line-height: 16px;
+}
+
+.rdd-menu ul ul > li > a {
+    display: block;
+    float: left;
+    font-size: 10px;
+    padding: 1px 0 1px 20px;
+    text-decoration: none;
+    background-position: 0 -70px;
+    background-repeat: no-repeat;
+}
+
+.rdd-menu ul ul ul {
+    float: left;
+    width: 90%;
+    padding: 2% 0 2% 10%;
+}
+
+.rdd-menu .submenu-panel h2,
+.rdd-menu .submenu-panel .h2 {
+    display: block;
+    font-size: 12px;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+.rdd-menu .submenu-panel h3,
+.rdd-menu .submenu-panel .h3 {
+    display: block;
+    font-size: 12px;
+    font-weight: normal;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+}
+
+.rdd-menu .submenu-panel h4,
+.rdd-menu .submenu-panel .h4 {
+    display: block;
+    font-size: 12px;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+.rdd-menu .submenu-panel .submenu-separator {
+    display: none;
+}
+
+
+
+/************************************
+ * Responsive Dropdown Menu: Submenu columns *
+ ************************************/
+
+.rdd-menu .submenu-panel .col {
+    float: left;
+    width: 86%;
+    padding: 0 7% 20px 7%;
+    /* Hide all content except Submenu links on small screens */
+    display: none;
+}
+
+.rdd-menu .submenu-panel .col.submenu-links {
+    display: block;
+}
+
+
+/* Column with Submenu related info (headline, image and text): Static */
+.rdd-menu .submenu-panel .col.submenu-info {
+    display: none;
+}
+
+/* Column with map */
+.rdd-menu .submenu-panel .col.submenu-map-wrapper {
+    display: none;
+}
+
+#map_canvas {
+    height: 14em;
+    min-height: 100%;
+    overflow: hidden;
+    width: 100%;
+    min-width: 100%;
+}
+
+#map_canvas h2 {
+    color: #000000;
+    font-size: 11px;
+    font-weight: bold;
+    margin-bottom: 0;
+    padding-bottom: 3px;
+    text-transform: uppercase;
+}
+
+#map_canvas p {
+    font-size: 11px;
+    line-height: 14px;
+}
+
+/* Submenu with related info (headline, image and text): Dynamic */
+.rdd-menu .related-info {
+    display: none;
+}
+
+
+
+/*********************************
+ * Responsive Dropdown Menu: Social links *
+ *********************************/
+
+a.social-link {
+    float: left;
+    width: 25px;
+    height: 25px;
+    margin-right: 7px;
+    text-indent: -2000em;
+    -moz-transition: all 0.2s ease-out 0s;
+    -ms-transition: all 0.2s ease-out 0s;
+    -o-transition: all 0.2s ease-out 0s;
+    -webkit-transition: all 0.2s ease-out 0s;
+    transition: all 0.2s ease-out 0s;
+}
+
+a.social-link.facebook {
+    background-position: 0 -25px;
+}
+
+a.social-link.facebook:hover {
+    background-position: 0 0;
+}
+
+a.social-link.twitter {
+    background-position: -25px -25px;
+}
+
+a.social-link.twitter:hover {
+    background-position: -25px 0;
+}
+
+a.social-link.pinterest {
+    background-position: -50px -25px;
+}
+
+a.social-link.pinterest:hover {
+    background-position: -50px 0;
+}
+
+a.social-link.skype {
+    background-position: -75px -25px;
+}
+
+a.social-link.skype:hover {
+    background-position: -75px 0;
+}
+
+a.social-link.googleplus {
+    background-position: -100px -25px;
+}
+
+a.social-link.googleplus:hover {
+    background-position: -100px 0;
+}
+
+
+
+/**********************************
+ * Responsive Dropdown Menu: Media Queries *
+ **********************************/
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) {
+.rdd-menu .submenu-panel .col.submenu-links img {
+    display: none;
+}    
+}
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    .rdd-menu > ul > li {
+        width: 50%;
+    }
+    
+    .rdd-menu .submenu-panel {
+        position: absolute;
+        top: 100%;
+        left: 0;
+    }
+}
+
+/* Smaller than standard 960 (devices and browsers) */
+@media only screen and (max-width: 959px) {
+    
+}
+
+/* Tablet Portrait size to standard 960 (devices and browsers) */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+    .rdd-menu > ul > li {
+        width: 50%;
+    }
+    
+    .rdd-menu .submenu-panel {
+        position: absolute;
+        top: 100%;
+        left: 0;
+    }
+    
+    /* Submenu columns */
+    .rdd-menu .submenu-panel .col {
+        display: block;
+    }
+    
+    /* Column with submenu related info (headline, image and text): static */
+    .rdd-menu .submenu-panel .col.submenu-info {
+        display: block;
+        background: none;
+    }
+    
+    .rdd-menu .submenu-info img {
+        display: block;
+        float: left;
+        width: 50%;
+        max-width: 50%;
+        margin: 5px 15px 0 0;
+    }
+    
+    /* Column with map */
+    .rdd-menu .submenu-panel .col.submenu-map-wrapper {
+        display: block;
+        float: none;
+        background: none;
+    }
+}
